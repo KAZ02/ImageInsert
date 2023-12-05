@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge"> <!--不要-->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>New-R-Code</title>
+  <link rel="stylesheet" href="css/main.css">
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/fabric.js/4.5.0/fabric.min.js"></script>
+  <script src="js/main.js" defer></script>
+</head>
+<body>
+  <!--エディター(画面全体)-->
+  <div class="editor">
+    <!--ツールバー-->
+    <div class="toolbar">
+      <!--「画像アップロード」-->
+      <div class="toolbar-item">
+        <input type="file" id="imageFileInput">
+      </div>
+      <!--「明度(brightness)」-->
+      <div class="toolbar-item">
+        <label class="tool-label" for="brightness">明度</label>
+        <input class="tool-input" type="range" id="brightness" min="0" max="200"> <!--スライダー生成//オリジナルの明度が100-->
+      </div>
+      <!--「彩度(saturation)」-->
+      <div class="toolbar-item">
+        <label class="tool-label" for="saturation">彩度</label>
+        <input class="tool-input" type="range" id="saturation" min="0" max="200"> <!--スライダー生成//オリジナルの彩度が100-->
+      </div>
+      <!--「ぼかし(blur)」-->
+      <div class="toolbar-item">
+        <label class="tool-label" for="blur">ぼかし</label>
+        <input class="tool-input" type="range" id="blur" min="0" max="25">  <!--スライダー生成-->
+      </div>
+      <!--「反転(inversion)」-->
+      <div class="toolbar-item">
+        <label class="tool-label" for="inversion">反転</label>
+        <input class="tool-input" type="range" id="inversion" min="0" max="100">  <!--スライダー生成-->
+      </div>
+    </div>
+    <!--イメージエリア-->
+    <div class="image-area">
+      <canvas id="canvas" height="500" width="500"></canvas>
+    </div>
+  </div>
+</body>
+</html>
